@@ -1,8 +1,8 @@
-/* Fylkeshuset – service worker: appen virker uten nett etter første besøk */
-const V = 'fylkeshuset-__V__';
+/* Organisasjonslære – service worker: appen virker uten nett etter første besøk */
+const V = 'organisasjonslaere-__V__';
 const FILES = __FILES__;
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
-self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('fylkeshuset-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
+self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('organisasjonslaere-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
   const r = e.request; if (r.method !== 'GET' || new URL(r.url).origin !== location.origin) return;
   if (r.mode === 'navigate') {

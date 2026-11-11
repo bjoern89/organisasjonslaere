@@ -1,8 +1,8 @@
-# Fylkeshuset – organisasjonsteori
+# Organisasjonslære
 
 Spillifisert læringsapp i organisasjonsteori for ansatte og studenter i kommunal og fylkeskommunal sektor. Eksemplene handler om digitalisering.
 
-**Åpne appen:** https://bjoern89.github.io/fylkeshuset/
+**Åpne appen:** https://bjoern89.github.io/organisasjonslaere/
 
 ## Innhold
 - 12 etasjer med de klassiske temaene i faget: organisasjon, mål og strategi, struktur, kultur, makt og konflikt, omgivelser, motivasjon, kommunikasjon, beslutninger, læring og innovasjon, endring og ledelse.

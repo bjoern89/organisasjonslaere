@@ -15,7 +15,7 @@ for (const f of fs.readdirSync(path.join(__dirname, 'site', 'icons'))) fs.copyFi
 fs.copyFileSync(src('icon.svg'), path.join(out, 'icons', 'icon.svg'));
 
 const manifest = {
-  name: 'Fylkeshuset – organisasjonsteori', short_name: 'Fylkeshuset', lang: 'nb', dir: 'ltr',
+  name: 'Organisasjonslære – læringsapp i organisasjonsteori', short_name: 'Organisasjonslære', lang: 'nb', dir: 'ltr',
   description: 'Spillifisert læringsapp i organisasjonsteori med caser fra kommunal og fylkeskommunal digitalisering.',
   id: './', start_url: './', scope: './', display: 'standalone', orientation: 'portrait',
   background_color: '#1C2E49', theme_color: '#1C2E49', categories: ['education'],

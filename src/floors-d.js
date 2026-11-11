@@ -1,4 +1,4 @@
-/* Fylkeshuset – faginnhold, etasje 10–12 */
+/* Organisasjonslære – faginnhold, etasje 10–12 */
 
 F.push({
   n: 10, id: 'f10', zone: 2,

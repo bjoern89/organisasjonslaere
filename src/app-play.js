@@ -151,7 +151,7 @@ function openHowto() {
     <div><dt>Etasjer</dt><dd>Hver etasje er et tema i organisasjonsteorien. Ta dem i rekkefølge, eller gå dit du trenger.</dd></div>
     <div><dt>Vinduer</dt><dd>Hver etasje har seks vinduer: tre rom, en case, en etasjeprøve og en refleksjon. Fullfør aktiviteten, så tennes lyset.</dd></div>
     <div><dt>Les, lytt, se og gjør</dt><dd>Rommene kan leses eller leses opp. Modellene kan du trykke på. Caser, simulator og verktøy lar deg bruke teorien.</dd></div>
-    <div><dt>Som app</dt><dd>Under Profil kan du legge Fylkeshuset på hjemskjermen. Da virker den også uten nett. Framdriften lagres på enheten, og du kan ta sikkerhetskopi.</dd></div>
+    <div><dt>Som app</dt><dd>Under Profil kan du legge Organisasjonslære på hjemskjermen. Da virker den også uten nett. Framdriften lagres på enheten, og du kan ta sikkerhetskopi.</dd></div>
     <div><dt>Dagens økt</dt><dd>Fem minutter med blandet repetisjon. Det du husker dårligst, kommer oftest tilbake.</dd></div>
     <div><dt>Nordlys</dt><dd>Når du når dagsmålet flere dager på rad, blir nordlyset over huset sterkere. En avspaseringsdag redder rekka hvis du glipper en dag.</dd></div>
     <div><dt>Titler</dt><dd>Poengene gir deg nye titler i Skarvøy fylkeskommune, fra sommervikar til fylkeskommunedirektør.</dd></div></dl></article></div></div><div class="ov-foot"><button class="btn wide" data-act="close">Da går jeg inn</button></div>` });

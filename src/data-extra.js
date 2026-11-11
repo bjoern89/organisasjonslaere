@@ -1,4 +1,4 @@
-/* Fylkeshuset – begreper, navn, modeller, brillecaser, simulator, eksamen, nivåer og merker */
+/* Organisasjonslære – begreper, navn, modeller, brillecaser, simulator, eksamen, nivåer og merker */
 
 const ZONES = [`Grunnmuren`, `Slik er huset bygd`, `Slik lever huset`, `Slik endres og ledes huset`];
 
@@ -288,8 +288,8 @@ const LENS = [
       { se: `For noen betyr forslaget at ledelsen ikke stoler på avdelingene. For andre er det et tegn på at fylkeskommunen endelig opptrer som én organisasjon.`, grep: `Fortell hvorfor: hva skal bli bedre for innbyggere og ansatte? Vis fram de første prosjektene som fikk fart fordi de ble løftet opp.`, blind: `Fortellinger uten reelle midler og mandat blir tomme ritualer.` }
     ],
     sort: [[`«Vi må få på plass mandat og terskelverdier før første møte.»`, 0], [`«Ildsjelene våre mister lysten når alt må søkes om.»`, 1], [`«Utdanning får fire plasser, og vi får én. Hvem tror du vinner?»`, 2], [`«Folk leser dette som at de ikke blir stolt på.»`, 3], [`«Styremedlemmene trenger tid til å sette seg inn i andres fag.»`, 1], [`«Den som skriver kriteriene, bestemmer i praksis.»`, 2]] },
-  { id: 'l2', t: `Rent bord i Fylkeshuset`,
-    text: `Fylkeshuset skal bygges om til aktivitetsbaserte arbeidsplasser. Ingen får fast plass. Cellekontorene forsvinner, og alle skal rydde pulten ved dagens slutt. Eiendomsavdelingen viser til at bare halvparten av plassene er i bruk en vanlig dag. Mange ansatte er opprørte.`,
+  { id: 'l2', t: `Rent bord i administrasjonsbygget`,
+    text: `Administrasjonsbygget skal bygges om til aktivitetsbaserte arbeidsplasser. Ingen får fast plass. Cellekontorene forsvinner, og alle skal rydde pulten ved dagens slutt. Eiendomsavdelingen viser til at bare halvparten av plassene er i bruk en vanlig dag. Mange ansatte er opprørte.`,
     lenses: [
       { se: `Halvparten av arealet står tomt. Ny løsning gir lavere kostnader og plasserer folk etter oppgave i stedet for etter enhet.`, grep: `Lag tydelige regler for soner, booking og oppbevaring. Sørg for at teamene vet hvor de finner hverandre.`, blind: `Ser arealeffektivitet, men ikke hva kontoret betyr for konsentrasjon og tilhørighet.` },
       { se: `Folk mister et sted som er deres. Noen trenger ro for å gjøre jobben. Andre frykter at de aldri finner kollegene sine.`, grep: `Kartlegg hva ulike oppgaver krever. Involver ansatte i utformingen, og tilpass for dem som har særlige behov.`, blind: `Kan ende med så mange unntak at løsningen aldri blir gjennomført.` },

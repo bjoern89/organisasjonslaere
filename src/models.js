@@ -1,4 +1,4 @@
-/* Fylkeshuset – tegninger av modellene. Hver klikkbar del er en <g class="mp" data-part>. */
+/* Organisasjonslære – tegninger av modellene. Hver klikkbar del er en <g class="mp" data-part>. */
 const drawModel = (() => {
   const t = (x, y, s, cls) => `<text x="${x}" y="${y}" text-anchor="middle"${cls ? ` class="${cls}"` : ''}>${s}</text>`;
   const rot = (x, y, s) => `<text x="${x}" y="${y}" text-anchor="middle" transform="rotate(-90 ${x} ${y})" class="sm">${s}</text>`;

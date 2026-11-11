@@ -1,5 +1,5 @@
 :root{
-  /* Fylkeshuset. Én venstrestilt kolonne. Fasaden er marineblå i begge temaer og er navet i appen.
+  /* Organisasjonslære. Én venstrestilt kolonne. Fasaden er marineblå i begge temaer og er navet i appen.
      Rav er lys i vinduer og framdrift, blått er handling, grønt og rødt er bare riktig og galt. */
   --bg:#EDF1F6; --surface:#FFFFFF; --surface-2:#E1E8F0; --ink:#13233A; --ink-2:#46576E; --line:#C4CFDB;
   --action:#1B4F8F; --on-action:#FFFFFF; --action-soft:#DDE8F5;
@@ -157,7 +157,7 @@ strong{font-weight:700}
 .sky::before{content:"";position:absolute;inset:0;background:radial-gradient(1.5px 1.5px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 31% 12%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 58% 30%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 74% 14%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 90% 34%,#fff 50%,transparent 51%);opacity:.7}
 .au{position:absolute;inset:-45% -15% 5% -15%;background:radial-gradient(55% 55% at 28% 45%,rgba(98,224,160,.95),transparent 70%),radial-gradient(45% 50% at 68% 35%,rgba(110,170,255,.75),transparent 70%),radial-gradient(35% 45% at 52% 60%,rgba(176,124,240,.55),transparent 70%);filter:blur(16px);opacity:calc(var(--aur,.2) * var(--aur-k));animation:drift 18s ease-in-out infinite alternate}
 @keyframes drift{from{transform:translateX(-4%) skewX(-6deg)}to{transform:translateX(4%) skewX(7deg)}}
-.skilt{position:absolute;left:1rem;bottom:-.42rem;font:800 3.9rem/1 var(--f-display);color:var(--glow);letter-spacing:.015em;text-shadow:0 0 22px rgba(245,188,75,.45)}
+.skilt{position:absolute;left:1rem;bottom:-.42rem;font:800 clamp(2.4rem,13.5vw,3.9rem)/1 var(--f-display);color:var(--glow);letter-spacing:.01em;text-shadow:0 0 22px rgba(245,188,75,.45)}
 .bldg{position:relative;margin:0 -1rem;background:var(--facade);color:var(--facade-ink);border-top:5px solid var(--facade-2)}
 .shaft{position:absolute;left:.7rem;top:0;bottom:0;width:1rem;background:rgba(3,8,16,.35);border-inline:1px solid var(--facade-2)}
 .car{position:absolute;left:1px;right:1px;top:0;height:1.7rem;background:var(--glow);border-radius:2px;box-shadow:0 0 12px rgba(245,188,75,.6);transition:top 1s cubic-bezier(.3,.1,.2,1)}

@@ -4,7 +4,7 @@ const VIEWS = {}, AFTER = {};
 const LEARN = `Appen bygger på det forskningen sier virker: du henter fram kunnskapen selv i stedet for å lese om igjen, repetisjonen spres over dager, temaene blandes, tekst kombineres med modeller, og alt knyttes til konkrete eksempler. Du velger form etter situasjonen: les, lytt, se eller gjør. Forskningen støtter ikke at folk har faste læringsstiler, så appen sorterer deg ikke i en.`;
 function route() { const h = (location.hash || '').slice(1), m = h.match(/^etasje-(\d+)$/); if (m && F[+m[1] - 1]) return { v: 'floor', f: F[+m[1] - 1] }; return { v: ['huset', 'tren', 'caser', 'verktoy', 'profil', 'arkiv', 'tak'].includes(h) ? h : 'huset' }; }
 function chips() { const st = streak(), a = $('#chip-st'), b = $('#chip-xp'), mk = $('.merke'); if (!a || !b) return;
-  if (mk) { const home = CUR.v === 'huset'; mk.textContent = home ? level().t : 'Fylkeshuset'; mk.setAttribute('href', home ? '#profil' : '#huset'); if (home) mk.setAttribute('aria-label', 'Tittelen din i Skarvøy: ' + level().t); else mk.setAttribute('aria-label', 'Fylkeshuset, til etasjeoversikten'); } a.innerHTML = icon('aurora', 18) + `<b>${st}</b>`; a.setAttribute('aria-label', `${st} ${st === 1 ? 'dag' : 'dager'} på rad`); b.innerHTML = `<b>${S.xp}</b> XP`; b.setAttribute('aria-label', `${S.xp} erfaringspoeng. Tittel: ${level().t}`); }
+  if (mk) { const home = CUR.v === 'huset'; mk.textContent = home ? level().t : 'Organisasjonslære'; mk.setAttribute('href', home ? '#profil' : '#huset'); if (home) mk.setAttribute('aria-label', 'Tittelen din i Skarvøy: ' + level().t); else mk.setAttribute('aria-label', 'Organisasjonslære, til etasjeoversikten'); } a.innerHTML = icon('aurora', 18) + `<b>${st}</b>`; a.setAttribute('aria-label', `${st} ${st === 1 ? 'dag' : 'dager'} på rad`); b.innerHTML = `<b>${S.xp}</b> XP`; b.setAttribute('aria-label', `${S.xp} erfaringspoeng. Tittel: ${level().t}`); }
 function render(top) {
   CUR = route(); $('#view').innerHTML = VIEWS[CUR.v](CUR);
   const tab = ['floor', 'tak', 'arkiv'].includes(CUR.v) ? 'huset' : CUR.v;
@@ -28,7 +28,7 @@ VIEWS.huset = () => {
       <div class="tb">${isNew ? `<button class="btn wide" data-act="go" data-k="f1r1">Start i 1. etasje</button><button class="btn ghost wide" data-act="howto">Slik virker huset</button>`
         : `${did || early ? '' : `<button class="btn wide" data-act="daily">Start dagens økt</button>`}${ns ? `<button class="btn ${did || early ? '' : 'ghost '}wide" data-act="go" data-k="${ns.key}">${esc(ns.label)}</button>` : `<a class="btn ghost wide" href="#tak">Gå til Takterrassen</a>`}${!did && early ? `<button class="btn ghost wide" data-act="daily">Ta dagens økt likevel</button>` : ''}`}</div>
     </section>
-    <div class="sky" style="--aur:${Math.min(1, 0.18 + st * 0.12).toFixed(2)}" aria-hidden="true"><div class="au"></div><div class="skilt">Fylkeshuset</div></div>
+    <div class="sky" style="--aur:${Math.min(1, 0.18 + st * 0.12).toFixed(2)}" aria-hidden="true"><div class="au"></div><div class="skilt">Organisasjonslære</div></div>
     <nav class="bldg" aria-label="Etasjeoversikt"><div class="shaft" aria-hidden="true"><div class="car" id="car"></div></div>
       <a class="fl sp${takOn ? ' lit' : ''}" href="#tak" aria-label="Takterrassen: fire briller, simulator og eksamenstrening"><span class="no">T</span><span class="tx"><span class="ti">Takterrassen</span><span class="su">Fire briller, simulator, eksamen</span></span><span class="win w3" aria-hidden="true"><i class="${lensAll ? 'on' : ''}"></i><i class="${S.done.sim != null ? 'on' : ''}"></i><i class="${S.stat.exam ? 'on' : ''}"></i></span></a>
       ${rows}
@@ -113,13 +113,13 @@ VIEWS.profil = () => {
         <label class="rng" for="set-rate"><span><strong>Lesehastighet</strong> <output id="rate-out">${S.set.rate.toFixed(1)}</output></span><input type="range" id="set-rate" min="0.7" max="1.5" step="0.1" value="${S.set.rate}" data-in="rate"></label></div>
       <p class="dim no-audio">Opplesning krever en norsk stemme for tekst til tale på enheten. Legg den til i innstillingene for tekst til tale, så dukker valgene opp her.</p>
       </section>
-    <section class="sec no-app"><h2>Bruk Fylkeshuset som app</h2><p>Legg appen på hjemskjermen, så åpner den i fullskjerm og virker uten nett.</p>
+    <section class="sec no-app"><h2>Bruk Organisasjonslære som app</h2><p>Legg appen på hjemskjermen, så åpner den i fullskjerm og virker uten nett.</p>
       <p class="need-install"><button class="btn" data-act="install">${icon('download', 18)} Installer appen</button></p>
       <p class="dim">${Inst.ios() ? 'På iPhone og iPad: Åpne siden i Safari, trykk på Del-knappen og velg «Legg til på Hjem-skjerm».' : 'I Chrome på Android: Åpne menyen med de tre prikkene og velg «Installer app» eller «Legg til på startskjermen».'}</p></section>
     <section class="sec"><h2>Framdrift og sikkerhetskopi</h2><p>Framdriften lagres bare på denne enheten. Ta en sikkerhetskopi før du bytter telefon, eller hvis du vil fortsette på PC. Henter du inn en kopi, slås den sammen med det som allerede ligger her.</p>
       <p class="rowb"><button class="btn ghost" data-act="bksave">${icon('download', 18)} Lagre sikkerhetskopi</button><label class="btn ghost" for="bk-f">Hent inn kopi</label><input type="file" id="bk-f" accept=".json,application/json" class="vh2"></p>
       <div id="rst"><button class="btn quiet danger" data-act="reset1">Nullstill framdriften</button></div></section>
-    <section class="sec about"><h2>Om appen</h2><p>${esc(LEARN)}</p><p>Etasjene følger de klassiske hovedtemaene i faget, slik du også finner dem i læreboka til Jacobsen og Thorsvik. Forklaringene er egne sammendrag av kjent faglitteratur og erstatter ikke pensum. Sjekk alltid mot din utgave av boka. Skarvøy fylkeskommune og personene i casene er oppdiktet.</p><p>Appen er uavhengig og ikke tilknyttet forfattere eller forlag. Den er åpen kildekode på <a href="https://github.com/bjoern89/fylkeshuset">GitHub</a>.</p><p><button class="btn ghost" data-act="howto">Slik virker huset</button></p>
+    <section class="sec about"><h2>Om appen</h2><p>${esc(LEARN)}</p><p>Etasjene følger de klassiske hovedtemaene i faget, slik du også finner dem i læreboka til Jacobsen og Thorsvik. Forklaringene er egne sammendrag av kjent faglitteratur og erstatter ikke pensum. Sjekk alltid mot din utgave av boka. Skarvøy fylkeskommune og personene i casene er oppdiktet.</p><p>Appen er uavhengig og ikke tilknyttet forfattere eller forlag. Den er åpen kildekode på <a href="https://github.com/bjoern89/organisasjonslaere">GitHub</a>.</p><p><button class="btn ghost" data-act="howto">Slik virker huset</button></p>
       <h3>Litteratur</h3><ul class="read">${LIT.map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>`;
 };
 
@@ -140,7 +140,7 @@ VIEWS.arkiv = () => `<header class="vh"><a class="backl" href="#huset">${icon('b
 /* ===================== Handlinger ===================== */
 function goKey(k) { const m = k.match(/^(f\d+)(r\d+|k|t|x)$/); if (!m) return; const f = FL(m[1]); if (!f) return;
   if (m[2][0] === 'r') playRoom(f, f.rooms.find(r => r.id === k)); else if (m[2] === 'k') playCase(f.kase, { key: k, f }); else if (m[2] === 't') playTest(f); else openReflect(f); }
-function notesText() { let out = '# Refleksjonslogg fra Fylkeshuset\n\n';
+function notesText() { let out = '# Refleksjonslogg fra Organisasjonslære\n\n';
   F.forEach(f => { const r = S.notes[f.id + 'x'], m = S.notes[f.id + 'm']; if (r || m) { out += `## ${f.n}. etasje: ${f.t}\n\n`; if (r) out += `Spørsmål: ${f.refl}\n\n${r}\n\n`; if (m) out += `Feltoppdrag: ${f.mission}\n\n${m}\n\n`; } });
   EXAM.forEach((e, i) => { const n = S.notes['ex' + i]; if (n) out += `## Drøfting: ${e.q}\n\n${n}\n\n`; }); return out; }
 const ACT = {
@@ -155,7 +155,7 @@ const ACT = {
   gallery: () => openGallery(), lens: el => openLens(el.dataset.k), tool: el => openTool(el.dataset.k),
   term: el => { const g = GL.find(x => x.id === el.dataset.k), box = $('#tdef'); if (!g || !box) return; $$('.chipsl .chipb').forEach(b => { const on = b === el; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); }); box.innerHTML = `<p><strong>${esc(g.t)}.</strong> ${esc(g.d)}</p>`; },
   arktab: el => { ARK.tab = el.dataset.k; render(false); },
-  copynotes: () => copyText(notesText(), 'Loggen er kopiert.'), dlnotes: () => DL.save('refleksjonslogg-fylkeshuset.md', notesText()),
+  copynotes: () => copyText(notesText(), 'Loggen er kopiert.'), dlnotes: () => DL.save('refleksjonslogg-organisasjonslaere.md', notesText()),
   reset1: () => { $('#rst').innerHTML = `<p role="alert"><strong>Vil du nullstille?</strong> All framdrift, alle notater og alt du har lagt inn i verktøyene, slettes.</p><p class="rowb"><button class="btn danger" data-act="reset2">Ja, nullstill</button><button class="btn ghost" data-act="reset0">Avbryt</button></p>`; const b = $('[data-act="reset0"]'); b && b.focus(); },
   reset0: () => { $('#rst').innerHTML = `<button class="btn quiet danger" data-act="reset1">Nullstill framdriften</button>`; },
   reset2: () => { S = fresh(); S.rst = Date.now(); CARY = null; save(); applySettings(); location.hash = '#huset'; render(); toast('Framdriften er nullstilt.', 'info'); }

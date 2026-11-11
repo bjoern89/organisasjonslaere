@@ -1,4 +1,4 @@
-/* Fylkeshuset – faginnhold, etasje 1–3.
+/* Organisasjonslære – faginnhold, etasje 1–3.
    Tekstkort har h (overskrift), b (brødtekst), ex (i praksis), fig (modell), src (kilde).
    Spørsmål har ty: mc (a[0] er riktig), tf (sant), multi (ok/no), match (pairs), order (items i riktig rekkefølge),
    sort (cats + items [tekst, kategori]), gap (q med ___, a[0] er riktig). */
@@ -94,7 +94,7 @@ F.push({
       why: `Organisasjoner søker legitimitet, ikke bare effektivitet. Du møter dette igjen i sjette etasje.` }
   ],
   kase: {
-    t: `Første uke på Fylkeshuset`,
+    t: `Første uke i Skarvøy fylkeskommune`,
     intro: `Du er nyansatt digitaliseringsrådgiver i Skarvøy fylkeskommune. Lederen din, Marit Aune, gir deg et oppdrag første dag: Den nye digitale søknaden om skoleskyss brukes av under halvparten av elevene. Finn ut hvorfor.`,
     steps: [
       { s: `Hvor starter du?`,

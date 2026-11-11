@@ -1,4 +1,4 @@
-/* Fylkeshuset – faginnhold, etasje 4–6 */
+/* Organisasjonslære – faginnhold, etasje 4–6 */
 
 F.push({
   n: 4, id: 'f4', zone: 1,

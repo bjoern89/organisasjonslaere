@@ -60,7 +60,7 @@ const TEASE = { f1: `Grunnbegreper og perspektiver`, f2: `Målhierarki, målfors
 const INT = [0, 1, 2, 4, 8, 16]; // dager mellom repetisjoner per boks
 
 /* ===================== Tilstand og lagring ===================== */
-const KEY = 'fylkeshuset.v1';
+const KEY = 'organisasjonslaere.v1';
 const fresh = () => ({ v: 1, up: 0, rst: 0, xp: 0, goal: 30, fr: 1, days: {}, frz: {}, done: {}, q: {}, cards: {}, notes: {}, badges: {}, seen: {}, daily: {},
   tools: { used: {} }, stat: { combo: 0, tutor: 0, sims: 0, refl: 0, mis: 0, exam: 0 }, set: { sound: false, rate: 1, auto: false, ts: 0, lb: false } });
 function norm(s) { const f = fresh(), o = Object.assign(f, s || {}); for (const k of ['days', 'frz', 'done', 'q', 'cards', 'notes', 'badges', 'seen', 'daily']) if (!o[k] || typeof o[k] !== 'object') o[k] = {};
@@ -124,12 +124,12 @@ const DL = {
 };
 
 // Sikkerhetskopi: framdriften ligger i nettleseren, så den kan flyttes mellom enheter som fil
-function backupSave() { save(); DL.save(`fylkeshuset-sikkerhetskopi-${today()}.json`, JSON.stringify(S), 'application/json'); }
+function backupSave() { save(); DL.save(`organisasjonslaere-sikkerhetskopi-${today()}.json`, JSON.stringify(S), 'application/json'); }
 function backupLoad(file) {
   if (!file) return; if (file.size > 3e6) return toast('Filen er for stor til å være en sikkerhetskopi.', 'info');
   const r = new FileReader();
   r.onload = () => { let o = null; try { o = JSON.parse(r.result); } catch (e) {}
-    if (!o || o.v !== 1 || typeof o.xp !== 'number') return toast('Filen er ikke en sikkerhetskopi fra Fylkeshuset.', 'info');
+    if (!o || o.v !== 1 || typeof o.xp !== 'number') return toast('Filen er ikke en sikkerhetskopi fra Organisasjonslære.', 'info');
     S = norm(mergeState(S, norm(o))); settle(); save(); applySettings(); render(false); toast('Sikkerhetskopien er hentet inn.', 'check'); };
   r.onerror = () => toast('Filen kunne ikke leses.', 'info'); r.readAsText(file);
 }
@@ -138,7 +138,7 @@ function backupLoad(file) {
 const Inst = { ev: null,
   init() {
     window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); this.ev = e; flag('can-install'); });
-    window.addEventListener('appinstalled', () => { this.ev = null; flag('can-install', false); toast('Fylkeshuset er installert.', 'house'); });
+    window.addEventListener('appinstalled', () => { this.ev = null; flag('can-install', false); toast('Organisasjonslære er installert.', 'house'); });
     if (this.standalone()) flag('is-app');
     if ('serviceWorker' in navigator && window.isSecureContext) navigator.serviceWorker.register('sw.js').catch(() => {});
   },
