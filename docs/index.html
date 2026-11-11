@@ -3083,7 +3083,7 @@ VIEWS.huset = () => {
       <div class="tb">${isNew ? `<button class="btn wide" data-act="go" data-k="f1r1">Start i 1. etasje</button><button class="btn ghost wide" data-act="howto">Slik virker huset</button>`
         : `${did || early ? '' : `<button class="btn wide" data-act="daily">Start dagens økt</button>`}${ns ? `<button class="btn ${did || early ? '' : 'ghost '}wide" data-act="go" data-k="${ns.key}">${esc(ns.label)}</button>` : `<a class="btn ghost wide" href="#tak">Gå til Takterrassen</a>`}${!did && early ? `<button class="btn ghost wide" data-act="daily">Ta dagens økt likevel</button>` : ''}`}</div>
     </section>
-    <div class="sky" style="--aur:${Math.min(1, 0.18 + st * 0.12).toFixed(2)}" aria-hidden="true"><div class="au"></div><div class="skilt">Organisasjonslære</div></div>
+    <div class="sky" style="--aur:${Math.min(1, 0.18 + st * 0.12).toFixed(2)}" aria-hidden="true"><div class="au"></div><div class="skilt">Fylkeshuset</div></div>
     <nav class="bldg" aria-label="Etasjeoversikt"><div class="shaft" aria-hidden="true"><div class="car" id="car"></div></div>
       <a class="fl sp${takOn ? ' lit' : ''}" href="#tak" aria-label="Takterrassen: fire briller, simulator og eksamenstrening"><span class="no">T</span><span class="tx"><span class="ti">Takterrassen</span><span class="su">Fire briller, simulator, eksamen</span></span><span class="win w3" aria-hidden="true"><i class="${lensAll ? 'on' : ''}"></i><i class="${S.done.sim != null ? 'on' : ''}"></i><i class="${S.stat.exam ? 'on' : ''}"></i></span></a>
       ${rows}

@@ -1,5 +1,5 @@
 /* Organisasjonslære – service worker: appen virker uten nett etter første besøk */
-const V = 'organisasjonslaere-9a0ac0d13c';
+const V = 'organisasjonslaere-acfc03b0e9';
 const FILES = ["./","index.html","manifest.webmanifest","fonts/schibsted-grotesk-latin-400-italic.woff2","fonts/schibsted-grotesk-latin-400-normal.woff2","fonts/schibsted-grotesk-latin-600-normal.woff2","fonts/schibsted-grotesk-latin-700-normal.woff2","fonts/sofia-sans-extra-condensed-latin-600-normal.woff2","fonts/sofia-sans-extra-condensed-latin-800-normal.woff2","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","icons/icon.svg"];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('organisasjonslaere-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
