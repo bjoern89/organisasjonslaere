@@ -1,0 +1,53 @@
+{
+  "name": "Fylkeshuset – organisasjonsteori",
+  "short_name": "Fylkeshuset",
+  "lang": "nb",
+  "dir": "ltr",
+  "description": "Spillifisert læringsapp i organisasjonsteori med caser fra kommunal og fylkeskommunal digitalisering.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1C2E49",
+  "theme_color": "#1C2E49",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dagens økt",
+      "url": "./#tren"
+    },
+    {
+      "name": "Caser",
+      "url": "./#caser"
+    }
+  ]
+}

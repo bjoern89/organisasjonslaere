@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fylkeshuset – organisasjonsteori</title>
+<meta name="description" content="Spillifisert læringsapp i organisasjonsteori med caser fra kommunal og fylkeskommunal digitalisering.">
+<meta name="theme-color" content="#1C2E49">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fylkeshuset">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preload" href="fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Schibsted Grotesk";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/schibsted-grotesk-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Schibsted Grotesk";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/schibsted-grotesk-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Schibsted Grotesk";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/schibsted-grotesk-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Schibsted Grotesk";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/schibsted-grotesk-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Sofia Sans Extra Condensed";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/sofia-sans-extra-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Sofia Sans Extra Condensed";font-weight:800;font-style:normal;font-display:swap;src:url(fonts/sofia-sans-extra-condensed-latin-800-normal.woff2) format("woff2")}
+</style>
+<style>
+/*CSS*/
+</style>
+</head>
+<body>
+<a class="skip" href="#view">Hopp til innholdet</a>
+<div class="app">
+  <header class="top">
+    <a class="merke" href="#huset">Fylkeshuset</a>
+    <div class="chips"><a class="chip" href="#profil" id="chip-st"></a><a class="chip" href="#profil" id="chip-xp"></a></div>
+  </header>
+  <main id="view" tabindex="-1"></main>
+</div>
+<nav class="tabs" aria-label="Hovedmeny">
+  <a href="#huset" data-t="huset"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6l8-3 8 3v15M9 21v-5h6v5M8 9h2M14 9h2M8 13h2M14 13h2"/></svg>Huset</a>
+  <a href="#tren" data-t="tren"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9M12 8a4 4 0 1 0 4 4M12 12l8-8M17 4h3v3"/></svg>Tren</a>
+  <a href="#caser" data-t="caser"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Caser</a>
+  <a href="#verktoy" data-t="verktoy"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L3 18l3 3 6.2-6.2a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>Verktøy</a>
+  <a href="#profil" data-t="profil"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg>Profil</a>
+</nav>
+<div id="ov" class="ov" role="dialog" aria-modal="true" hidden></div>
+<div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+<script>
+/*JS*/
+</script>
+</body>
+</html>
